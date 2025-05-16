@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,th {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: #725555;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Code</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>India</td>
+                <td>IN</td>
+                <td>india@gmail.com</td>
+            </tr>
+            
+            <tr>
+                <td >Srilanks</td>
+                <td >SL</td>
+                <td>srilanks@gmail.com</td>
+            </tr>
+            
+            <tr>
+                <td>Australis</td>
+                <td>AUS</td>
+                <td>australia@gmail.com</td>
+            </tr>
+            
+            <tr>
+                <td>West Indies</td>
+                <td>WI</td>
+                <td>westindies@gmail.com</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>Total</td>
+            <td>4</td>
+            <td>4</td>
+        </tfoot>
+    </table>
+</body>
+</html>

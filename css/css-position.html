@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+
+      .property {
+        position: absolute;
+        z-index: -999;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <img style="border: 2px solid blue" src="tp.jpg" alt="vada" />
+    <img class="property" src="tp.jpg" alt="vada" />
+    <img
+      style="border: 2px solid yellow; height: 100px; width: 100px"
+      src="tp.jpg"
+      alt="vada"
+    />
+    <img style="border: 2px solid brown" src="tp.jpg" alt="vada" />
+  </body>
+</html>
