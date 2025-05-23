@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow</title>
+    <style>
+      .container {
+        background-color: antiquewhite;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main {
+        background-color: aqua;
+        border: 2px solid black;
+        width: 400px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px -5px red, 5px 5px red;
+      }
+
+      /* h1 {
+        text-shadow: -100px -5px red, 100px 5px #00ff0d, 0px 100px #ff00b3;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <img width="70px" src="tp.jpg" alt="" />
+        <h1>Arjun</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+          reprehenderit corrupti deleniti placeat fuga id velit alias
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

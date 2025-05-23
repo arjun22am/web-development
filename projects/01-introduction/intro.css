@@ -107,3 +107,9 @@ nav {
   font-size: 40px;
   padding-right: 500px;
 }
+
+@media (max-width: 640px) {
+  .middle {
+    flex-direction: column;
+  }
+}
