@@ -4,12 +4,21 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px; /* Now 1rem = 16px */
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 nav {
   position: fixed;
   top: 0; /* Stick to the top */
-  left: 50%; /* Move to the center horizontally */
-  transform: translateX(-50%); /* Shift back by 50% of its own width */
-  width: 35%;
+  left: calc(50% - (660px / 2)); /* Move to the center horizontally */
+  /* transform: translateX(-50%); Shift back by 50% of its own width */
+  width: 660px;
   padding: 0 0 20px 0;
   z-index: 1000; /*Make sure it's on top of other content*/
 }
@@ -22,6 +31,7 @@ nav {
   gap: 20px;
   font-size: 20px;
   color: #4791c3;
+  /* border: 1px solid black; */
 }
 
 .overlay {
@@ -40,30 +50,156 @@ nav {
   align-items: center;
   height: 100vh;
   width: calc(100vw-100px);
-  background-image: url(assests/main.jpg);
+  background-image: url(assests/computer.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .content {
   z-index: 10;
+  text-align: center;
 }
 
-.middle h1 {
+.content h1 {
   font-size: 100px;
   color: white;
 }
 
-.middle h2 {
+.content h2 {
   font-size: 50px;
   color: #a0c8db;
+  color: #8cc3e8;
 }
 
-.middle button {
+.content button {
   margin-top: 20px;
   font-size: 20px;
-  border: 2px solid white;
+  border: 4px solid white;
   background-color: transparent;
   padding: 20px;
   border-radius: 40px;
+  color: white;
+}
+
+.about {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f2f2f5;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.about h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #3498db;
+  margin: 8px auto 0;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  /* color: #555; */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skillsheading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.skillspara {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skillspara p {
+  padding: 15px;
+  background-color: #e4e4ea;
+  font-size: 1.1rem;
+}
+
+.experience {
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  width: 100%;
+  background-color: #e4e4ea;
+}
+
+.expheading h1 {
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+
+.expcontent h3 span {
+  font-weight: normal;
+}
+
+.expcontent h3 {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+  text-align: start;
+}
+
+.expcontent li {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.expitems {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  padding: 0px 500px;
+}
+.expitems li {
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+/* Project section */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 80px;
+}
+
+.project {
+  background-color: #e4e4ea;
+  width: 100%;
+}
+.project-ul {
+  line-height: 2rem;
 }
