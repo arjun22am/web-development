@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main">
+    <main>
       <nav>
         <div class="nav">
           <span>About</span>
@@ -31,7 +31,7 @@
       <div class="about">
         <h1>About Me</h1>
         <p>
-          I’m a data enthusiast with a degree in AI & ML and hands-on experience
+          I'm a data enthusiast with a degree in AI & ML and hands-on experience
           in data analysis, automation, and dashboarding. Worked on real-time
           analytics projects using Python, SQL, Tableau, and cloud platforms
           like GCP and AWS.Skilled in web scraping, data cleaning, and building
@@ -56,7 +56,7 @@
         </div>
       </div>
 
-      <div class="experience">
+      <!-- <div class="experience">
         <div class="expheading">
           <h1>Experience</h1>
         </div>
@@ -133,15 +133,12 @@
         </div>
       </div>
 
-      <div class="projects">
-        <div class="project-title">
-          <h1>Projects</h1>
-        </div>
-        <div class="project">
-          <div class="project-name">
-            <h2>NLCPHS - Student Performance Dashboard</h2>
-          </div>
-          <ul class="project-ul">
+      <section class="projects">
+        <h1>Projects</h1>
+
+        <article class="project first">
+          <h2>NLCPHS - Student Performance Dashboard</h2>
+          <ul>
             <li>
               Developed Python scripts to fetch student data from the
               PowerSchool API, deployed and scheduled on a GCP-hosted Virtual
@@ -166,24 +163,22 @@
             </li>
             <li>
               Implemented dynamic parameters to allow user-driven filtering
-              across all dashboard sheets, improving usability and flexibility
+              across all dashboard sheets, improving usability and flexibility.
             </li>
             <li>
               Built complex calculated fields in Tableau to accurately reflect
-              KPIs and custom logic requested by the client
+              KPIs and custom logic requested by the client.
             </li>
             <li>
               Ensured end-to-end automation and high dashboard performance for
               real-time student performance monitoring.
             </li>
           </ul>
-        </div>
+        </article>
 
-        <div class="project">
-          <div class="projectname">
-            <h2>DroneFace.AI</h2>
-          </div>
-          <ul class="project-ul">
+        <article class="project">
+          <h2>DroneFace.AI</h2>
+          <ul>
             <li>
               Designed and developed a drone-based system integrating facial
               recognition and classification using machine learning algorithms.
@@ -202,15 +197,15 @@
             </li>
             <li>
               Enabled seamless data flow between the drone system and the VR
-              headset for facial tracking and interaction
+              headset for facial tracking and interaction.
             </li>
             <li>
               Applied the solution in real-world scenarios such as surveillance,
               search and rescue, and security operations.
             </li>
           </ul>
-        </div>
-      </div>
+        </article>
+      </section>
 
       <div class="education">
         <h1>Education</h1>
@@ -272,7 +267,7 @@
             alt=""
           /><img src="assests/email.png" alt="" />>
         </div>
-      </div>
-    </div>
+      </div> -->
+    </main>
   </body>
 </html>

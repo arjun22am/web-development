@@ -4,23 +4,20 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px; /* Now 1rem = 16px */
-}
-
-.main {
+main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 nav {
   position: fixed;
-  top: 0; /* Stick to the top */
-  left: calc(50% - (660px / 2)); /* Move to the center horizontally */
-  /* transform: translateX(-50%); Shift back by 50% of its own width */
+  top: 0;
+  left: calc(50% - (660px / 2));
   width: 660px;
   padding: 0 0 20px 0;
-  z-index: 1000; /*Make sure it's on top of other content*/
+  z-index: 1000;
 }
 
 .nav {
@@ -31,7 +28,7 @@ nav {
   gap: 20px;
   font-size: 20px;
   color: #4791c3;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 .overlay {
@@ -49,7 +46,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: calc(100vw-100px);
+  width: 100%;
   background-image: url(assests/computer.jpg);
   background-size: cover;
   background-position: center;
@@ -140,66 +137,4 @@ nav {
   padding: 15px;
   background-color: #e4e4ea;
   font-size: 1.1rem;
-}
-
-.experience {
-  margin: 0 auto;
-  padding: 80px 20px;
-  text-align: center;
-  width: 100%;
-  background-color: #e4e4ea;
-}
-
-.expheading h1 {
-  font-size: 2.5rem;
-  padding-bottom: 20px;
-}
-
-.expcontent h3 span {
-  font-weight: normal;
-}
-
-.expcontent h3 {
-  font-size: 1.2rem;
-  padding-bottom: 20px;
-  text-align: start;
-}
-
-.expcontent li {
-  line-height: 1.5rem;
-  font-size: 1.1rem;
-  text-align: justify;
-}
-
-.expitems {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  list-style: none;
-  padding: 0px 500px;
-}
-.expitems li {
-  background-color: white;
-  padding: 10px 30px;
-  border-radius: 10px;
-}
-
-/* Project section */
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  text-align: center;
-  padding: 80px;
-}
-
-.project {
-  background-color: #e4e4ea;
-  width: 100%;
-}
-.project-ul {
-  line-height: 2rem;
 }
