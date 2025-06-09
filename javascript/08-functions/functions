@@ -1,0 +1,31 @@
+// Q1 write a function named makeTea take one parameter and print the function
+
+function makeTea(typeOfTea) {
+  return `Making ${typeOfTea}`;
+}
+
+let greet = makeTea("Green Tea");
+// console.log(greet);
+
+//write a function insdie another function and call it inside that function
+
+function orderTea(teaType) {
+  function confirmOrder() {
+    return `Confirmed your ${teaType}`;
+  }
+  return confirmOrder();
+}
+
+let orderConfirmation = orderTea("Green Tea");
+// console.log(orderConfirmation);
+
+function reg() {
+  console.log("First", this);
+}
+
+const regular = () => {
+  console.log("Second", this);
+};
+
+reg();
+regular();

@@ -1,0 +1,112 @@
+// Write a for loop to loop through an array and stop when you see 'chai' and store all items before chai in a new array
+
+let teaName = ["green tea", "Black tea", "chai", "oolong tea"];
+let selectedTeas = [];
+
+for (let i = 0; i < teaName.length; i++) {
+  if (teaName[i] === "chai") {
+    break;
+  }
+  selectedTeas.push(teaName[i]);
+}
+
+console.log(selectedTeas);
+
+//write a for loop to skip paris from an array and store the rest in a new array
+
+let cities = ["london", "newYork", "paris", "berlin"];
+let visitedCities = [];
+
+for (let i = 0; i < cities.length; i++) {
+  if (cities[i] === "paris") {
+    continue;
+  }
+  visitedCities.push(cities[i]);
+}
+console.log(visitedCities);
+
+// iterate through the array using for off loop and break when the number is 4
+
+let numbers = [1, 2, 3, 4];
+let newNumber = [];
+
+for (const i of numbers) {
+  if (i === 4) {
+    break;
+  }
+  newNumber.push(i);
+}
+console.log(newNumber);
+
+// Write a for-off loop to loop through an array and stop when you see 'chai' and store all items before chai in a new array
+
+let teaNames = ["green tea", "Black tea", "chai", "oolong tea"];
+let selectedTea = [];
+
+for (const i of teaNames) {
+  if (i === "chai") {
+    continue;
+  }
+  selectedTea.push(i);
+}
+console.log(selectedTea);
+
+//use for in now
+
+let faaltuObject = {
+  pehlaKey: 150,
+  dusraKey: 250,
+};
+
+let dusraFaaltuObject = {};
+
+for (let obj in faaltuObject) {
+  dusraFaaltuObject[obj] = faaltuObject[obj];
+}
+
+console.log(dusraFaaltuObject);
+
+//use a for in loop to loop through an object and skip the city whose population is less that 3000000
+
+let worldCities = {
+  sydney: 5000000,
+  Tokyo: 9000000,
+  paris: 2000000,
+  berlin: 3500000,
+};
+
+let largecities = {};
+
+for (let i in worldCities) {
+  if (worldCities[i] < 3000000) {
+    continue;
+  }
+  largecities[i] = worldCities[i];
+}
+console.log(largecities);
+
+//Write a `forEach` loop that iterates through the array ["earl grey", "green tea", "chai", "oolong tea"]
+// stop the loop when "chai is found, and store all previous tea types in an array named "availableTeas
+
+let newwteas = ["earl grey", "green tea", "chai", "oolong tea"];
+largecities = [];
+newwteas.forEach(function (tea) {
+  if (tea === "chai") {
+    return;
+  }
+  largecities.push(tea);
+});
+console.log(largecities);
+
+// skip the num 7 and multiply the rest by 2
+
+let numarray = [2, 5, 7, 9];
+let doublednumbers = [];
+
+for (let i = 0; i < numarray.length; i++) {
+  if (numarray[i] === 7) {
+    continue;
+  }
+  doublednumbers.push(numarray[i] * 2);
+}
+console.log(doublednumbers);
