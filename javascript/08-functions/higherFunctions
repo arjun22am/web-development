@@ -1,0 +1,29 @@
+import { log10 } from "chart.js/helpers"
+
+// 
+function makeTea(teaType){
+    return `Making ${teaType}`
+}
+
+function processTeaOrder(teaFunction){
+    return teaFunction('earl grey')
+}
+
+let process = processTeaOrder(makeTea)
+// console.log(process);
+
+
+/*5. Write a function named `createTeaMaker` that returns another function. 
+The returned function should take one parameter, `teaType`, and return a message like `"Making green tea"`.
+Store the returned function in a variable named `teaMaker` and call it with `"green tea"`.
+*/
+
+function createTeaMaker(name){
+    return function(teaType){
+        return `Making ${teaType}`
+    }
+}
+
+let teaMaker = createTeaMaker('hitesh')
+console.log(teaMaker("Green tea"));
+
