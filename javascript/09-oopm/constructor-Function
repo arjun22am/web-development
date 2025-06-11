@@ -32,3 +32,16 @@ Animal.prototype.sound = function () {
 
 let dog = new Animal("Dog");
 console.log(dog.sound());
+
+
+
+//Error
+function Drink (name){
+  if(!new.target){
+    throw new Error("Please call Drink with New");
+    }
+  this.name = name
+}
+
+let john = Drink("John Cena")
+console.log(john);
