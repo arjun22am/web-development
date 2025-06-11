@@ -1,0 +1,34 @@
+function Tea(teaTypes) {
+  this.teaTypes = teaTypes;
+  this.newFunc = function () {
+    return `This is your ${this.teaTypes}`;
+  };
+}
+
+let newTea = new Tea("Green Tea");
+console.log(newTea.newFunc());
+
+// 2 nd Example
+
+function Cars(company, model) {
+  this.company = company;
+  this.model = model;
+}
+
+let newcar = new Cars("Tata", "Safari");
+let newcar2 = new Cars("Honda", "City");
+console.log(newcar);
+console.log(newcar2);
+
+//3rd Example
+
+function Animal(species) {
+  this.species = species;
+}
+
+Animal.prototype.sound = function () {
+  return `${this.species} Bark`;
+};
+
+let dog = new Animal("Dog");
+console.log(dog.sound());

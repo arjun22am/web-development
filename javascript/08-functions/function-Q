@@ -1,0 +1,9 @@
+const a = 18;
+const b = 24;
+
+// Addition of two values
+function add(a, b) {
+  let addition = a + b;
+  return addition;
+}
+console.log(add(a, b));

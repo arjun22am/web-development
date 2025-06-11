@@ -1,0 +1,22 @@
+let computer = { cpu: 12 };
+
+let lenovo = {
+  screen: "HD",
+  __proto__: computer,
+};
+
+let tomhardware = {};
+
+console.log(`lenovo `, lenovo.__proto__);
+
+let genericCar = { tyres: 4 };
+
+let tesla = { driver: "AI" };
+
+//Define the prototype
+
+Object.setPrototypeOf(tesla, genericCar);
+
+// Get the prototype or use the prototype
+
+console.log(Object.getPrototypeOf(tesla));
