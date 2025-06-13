@@ -90,8 +90,10 @@ console.log(largecities);
 
 let newwteas = ["earl grey", "green tea", "chai", "oolong tea"];
 largecities = [];
+let stop = false;
 newwteas.forEach(function (tea) {
   if (tea === "chai") {
+    stop = true;
     return;
   }
   largecities.push(tea);
