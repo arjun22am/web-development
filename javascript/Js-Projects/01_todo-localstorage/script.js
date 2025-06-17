@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const addTaskButton = document.getElementById("add-task-btn");
   const todoList = document.getElementById("todo-list");
 
-  let tasks = JSON.parse(localStorage.getItem("values")) || []; // Empty array for storing the tasks
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || []; // Empty array for storing the tasks
 
   tasks.forEach((task) => {
     renderTasks(task);
@@ -24,34 +24,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tasks.push(newtask);
     savetasks(); //appending them to tasks array
-    renderTasks(newtask)
+    renderTasks(newtask);
     todoInput.value = ""; // after doing everthing making todoInput empty again
     console.log(tasks);
   });
 
   function renderTasks(task) {
-    const li = document.createElement('li')
-    if (task.completed){li.classList.add("completed")}
-    li.setAttribute('data-id',task.id)
+    const li = document.createElement("li");
+    if (task.completed) {
+      li.classList.add("completed");
+    }
+    li.setAttribute("data-id", task.id);
     li.innerHTML = `
     <span>${task.task} </span>
-    <button>delete</button>`
+    <button>delete</button>`;
 
-    li.addEventListener("click", e=>{
-      if (e.target.tagName === "BUTTON") return
-      task.id !== task.id
-      li.classList.toggle("completed")
-      savetasks()
-    })
+    li.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") return;
+      task.id !== task.id;
+      li.classList.toggle("completed");
+      savetasks();
+    });
 
-    li.querySelector("button").addEventListener('click',e => {
-      e.stopPropagation()   //prevent toggle from firing
-      tasks = tasks.filter(t=> t.id !==task.id)
-      li.remove()
-      savetasks()
-      })
-    todoList.appendChild(li)
+    li.querySelector("button").addEventListener("click", (e) => {
+      // e.stopPropagation(); //prevent toggle from firing
+      tasks = tasks.filter((t) => t.id !== task.id); // tasks = [1, 2, 3] => 3 !== 2
+      li.remove();
+      savetasks();
+    });
 
+    todoList.appendChild(li);
   }
 
   function savetasks() {
