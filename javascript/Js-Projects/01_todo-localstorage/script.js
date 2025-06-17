@@ -24,12 +24,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tasks.push(newtask);
     savetasks(); //appending them to tasks array
+    renderTasks(newtask)
     todoInput.value = ""; // after doing everthing making todoInput empty again
     console.log(tasks);
   });
 
   function renderTasks(task) {
-    console.log(task);
+    const li = document.createElement('li')
+    if (task.completed){li.classList.add("completed")}
+    li.setAttribute('data-id',task.id)
+    li.innerHTML = `
+    <span>${task.task} </span>
+    <button>delete</button>`
+
+    li.addEventListener("click", e=>{
+      if (e.target.tagName === "BUTTON") return
+      task.id !== task.id
+      li.classList.toggle("completed")
+      savetasks()
+    })
+
+    li.querySelector("button").addEventListener('click',e => {
+      e.stopPropagation()   //prevent toggle from firing
+      tasks = tasks.filter(t=> t.id !==task.id)
+      li.remove()
+      savetasks()
+      })
+    todoList.appendChild(li)
+
   }
 
   function savetasks() {
