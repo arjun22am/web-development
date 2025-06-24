@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!city) return;
 
-    try {
-      const weatherData = await getWeatherData(city);
+    const weatherData = await getWeatherData(city);
+    if (weatherData.cod !== "404") {
       displayWeatherData(weatherData);
-    } catch (error) {
+    } else {
       displayError();
     }
   });
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(response);
 
     if (!response.ok) {
-      throw new Error("City not found");
+      console.log("City nai mili");
     }
 
     const data = await response.json();
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function displayError() {
-    weatherInfo.classList.remove("hidden");
-    errorMessage.classList.add("hidden");
+    weatherInfo.classList.add("hidden");
+    errorMessage.classList.remove("hidden");
   }
 });
