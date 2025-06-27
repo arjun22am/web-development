@@ -2,13 +2,23 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [color, setColor] = useState("olive");
+  const [color, setColor] = useState("white");
 
   return (
     <div className="h-screen w-screen" style={{ backgroundColor: color }}>
-      <div className="text-center mt-20">
-        <h1 className="text-3xl font-bold text-gray-800">Hello Changers</h1>
-        <p className="text-gray-600 mt-2">
+      <div className="text-center">
+        <h1
+          className={`text-3xl font-bold ${
+            color === "blue" || color === "green" ? "text-white" : "text-black"
+          }`}
+        >
+          Hello Changers
+        </h1>
+        <p
+          className={`${
+            color === "blue" || color === "green" ? "text-white" : "text-black"
+          } mt-2`}
+        >
           Click below buttons to change the color
         </p>
       </div>
