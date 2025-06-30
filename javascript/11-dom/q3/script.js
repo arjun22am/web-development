@@ -10,76 +10,78 @@ document
 //example 2  Traversing the DOM
 
 document
-  .getElementById("highlightFirstCity").addEventListener("click",function (){
-    let cities = document.getElementById("citiesList")
-    cities.firstElementChild.classList.add("highlight")
-  })
+  .getElementById("highlightFirstCity")
+  .addEventListener("click", function () {
+    let cities = document.getElementById("citiesList");
+    cities.firstElementChild.classList.add("highlight");
+  });
 
 //exmaple 3  Manipulating DOM Elements
+document.getElementById("changeOrder").addEventListener("click", function () {
+  let coffeeType = document.getElementById("coffeeType");
+  coffeeType.textContent = "Espresso";
+  coffeeType.style.backgroundColor = "white";
+  coffeeType.style.color = "black";
+  // coffeeType.style.margin= "50px"
+  coffeeType.style.padding = "5px";
+});
+
+// example 4  Creating and Inserting Elements
+
+document.getElementById("addNewItem").addEventListener("click", function () {
+  let newitem = document.createElement("li");
+  newitem.textContent = "Chicken";
+  document.getElementById("shoppingList").append(newitem);
+});
+
+//exmaple 5  Removing DOM Elements
+
 document
-  .getElementById("changeOrder").addEventListener("click",function (){
-    let coffeeType = document.getElementById("coffeeType")
-    coffeeType.textContent = "Espresso"
-    coffeeType.style.backgroundColor = "white"
-    coffeeType.style.color = "black"
-    // coffeeType.style.margin= "50px"
-    coffeeType.style.padding = "5px"
-  })
+  .getElementById("removeLastTask")
+  .addEventListener("click", function () {
+    let removelastitem = document.getElementById("taskList");
+    removelastitem.lastElementChild.remove();
+  });
 
+//exmaple 6 ( Event Handling)
 
-  // example 4  Creating and Inserting Elements
+document
+  .getElementById("clickMeButton")
+  .addEventListener("mouseover", function () {
+    alert("Event Updated : Yes");
+  });
 
-  document.getElementById("addNewItem").addEventListener("click", function(){
-    let newitem = document.createElement('li')
-    newitem.textContent = "Chicken"
-    document.getElementById("shoppingList").append(newitem)
-  })
+//exmaple 7 Event Delegation
 
+document.getElementById("teaList").addEventListener("click", function (event) {
+  if (event.target.matches(".teaItem")) {
+    alert("You selected : " + event.target.textContent);
+  }
+});
 
-  //exmaple 5  Removing DOM Elements
+//example 8 Form Handling
 
-  document.getElementById("removeLastTask").addEventListener("click",function () {
-    let removelastitem = document.getElementById("taskList")
-    removelastitem.lastElementChild.remove()
-    
-  })
+document
+  .getElementById("feedbackForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    let feedback = document.getElementById("feedbackInput").value;
+    document.getElementById(
+      "feedbackDisplay"
+    ).textContent = `Feedback is :  ${feedback}`;
+  });
 
-  //exmaple 6 ( Event Handling)
+//exmaple 9 DomContentLoaded
 
-  document.getElementById("clickMeButton").addEventListener('mouseover',function(){
-    alert("Event Updated : Yes")
-  })
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("domStatus").textContent = "Dom Fully Loaded";
+});
 
+// exmaple 10
 
-  //exmaple 7 Event Delegation
-
-
-  document.getElementById("teaList").addEventListener("click",function(event){
-    if(event.target.matches(".teaItem")){
-
-      alert("You selected : "+ event.target.textContent)
-    }
-  })
-
-
-  //example 8 Form Handling
-
-  document.getElementById("feedbackForm").addEventListener("submit", function(event){
-    event.preventDefault()
-    let feedback =  document.getElementById("feedbackInput").value
-    document.getElementById("feedbackDisplay").textContent = `Feedback is :  ${feedback}`
-    
-  })
-
-  //exmaple 9 DomContentLoaded
-
-  document.addEventListener("DOMContentLoaded",function(){
-    document.getElementById("domStatus").textContent = "Dom Fully Loaded"
-  })
-
-// exmaple 10 
-
-document.getElementById("toggleHighlight").addEventListener("click",function(){
-  let descText = document.getElementById("descriptionText")
-  descText.classList.toggle("highlight")
-})
+document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    let descText = document.getElementById("descriptionText");
+    descText.classList.toggle("highlight");
+  });
